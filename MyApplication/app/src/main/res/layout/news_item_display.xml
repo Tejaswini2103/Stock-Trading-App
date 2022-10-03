@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginBottom="2dp"
+    android:background="@drawable/news_item_display_corners" android:elevation="3dp"
+    android:paddingStart="8dp" android:paddingTop="5dp" android:paddingBottom="5dp">
+
+    <LinearLayout  android:layout_height="wrap_content" android:layout_width="0dp"
+        android:layout_marginEnd="9dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/news_image"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="horizontal">
+
+            <TextView android:id="@+id/news_publishedBy"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                tools:text="Business Insider"
+                android:textStyle="bold"
+                android:textColor="@color/darkgray"
+                android:textSize="17sp" />
+
+            <TextView android:id="@+id/news_publishedAt"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="9dp"
+                tools:text="Today"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/news_title"
+            tools:text="This is the title of news item"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="7dp"
+            android:textSize="17sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <ImageView android:id="@+id/news_image"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

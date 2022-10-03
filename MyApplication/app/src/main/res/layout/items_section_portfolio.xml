@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:paddingStart="11dp"
+
+    android:paddingVertical="8dp" >
+
+    <LinearLayout android:id="@+id/LinearLayout_portfolio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rightArrow_portfolioView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginEnd="2dp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/ticker_portfolioView"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:textSize="21sp"
+                tools:text="ORCL"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/lastPrice_portfolioView"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView android:id="@+id/lastPrice_portfolioView"
+
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                tools:text="32222"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toEndOf="@id/ticker_portfolioView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintBaseline_toBaselineOf="@id/ticker_portfolioView"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginTop="2dp">
+
+            <TextView android:id="@+id/descrption_portfolioView"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                tools:text="2 Shares"
+                android:layout_marginEnd="8dp"
+                android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/change_portfolioView"
+
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/change_portfolioView"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+
+
+                app:layout_constraintStart_toEndOf="@id/descrption_portfolioView"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/descrption_portfolioView">
+
+                <ImageView android:id="@+id/trending_portfolioView"
+                    android:layout_height="21dp"
+                    android:layout_width="21dp"
+                    tools:background="@mipmap/trending_up_small" android:layout_marginEnd="6dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/changeValue_portfolio"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView android:id="@+id/changeValue_portfolio"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/trending_portfolioView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/black"
+                    tools:text="4322"
+
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <ImageView android:id="@+id/rightArrow_portfolioView" android:layout_height="35dp" android:layout_width="35dp"
+        app:layout_constraintStart_toEndOf="@+id/LinearLayout_portfolio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@mipmap/right_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
